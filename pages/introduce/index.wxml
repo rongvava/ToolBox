@@ -4,7 +4,7 @@
   <view class="box">
     <view class="title">关于工具箱</view>
     <view class="content">
-      该项目是我个人开发的一款常用工具库，以后也会不断的增加一些功能，如何你有什么好的建议和意见，可以与我联系，vx: Roovava。
+      该项目是我个人开发的一款常用工具库，以后也会不断的增加一些功能，如何你有什么好的建议和意见，可以与我联系，vx: <text user-select>Roovava</text>。
     </view>
     <view class="content">免费使用，不收取任何费用。</view>
     <view class="content">部分素材来源于网络，如有侵权，请联系删除。</view>
