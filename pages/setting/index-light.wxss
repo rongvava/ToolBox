@@ -1,0 +1,8 @@
+.cell__light {
+  --cell-background-color: #ffffff;
+  --cell-active-color: #ebebeb;
+}
+
+.cell__light .van-cell__title {
+  color: #333333;
+}

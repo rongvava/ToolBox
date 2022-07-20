@@ -1,0 +1,4 @@
+.van-tabbar-item {
+  --tabbar-item-margin-bottom: 0;
+  background-color: #2a2c39;
+}

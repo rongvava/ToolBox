@@ -1,0 +1,63 @@
+<van-notify id="van-notify" />
+
+<view class="textBox" style="background-color:{{backgroundColor}}" bindtap="showInput">
+  <view class='text' style="font-size: {{fontSize}}rpx; animation: animateText {{animateTime}}s infinite linear; color:{{fontColor}}">
+    {{text}}
+  </view>
+</view>
+
+<view class="inputBox" wx:if="{{isShowInput}}">
+  <input class="inp" placeholder="Please enter the barrage~" bindinput="sendBtn" cursor-spacing='10'></input>
+  <view bindtap="queryRequest" class="iconfont icon-1huojian iconBtn1"></view>
+  <view bindtap="showModal" class="iconfont icon-qita3 iconBtn1"></view>
+</view>
+
+
+<!--屏幕背景变暗的背景 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+
+<!-- 屏幕内容 -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+
+  <view class="swiper-tab swiperAttr">
+    <view class="iconfont icon-jurassic_font-sizeadd swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab"></view>
+    <view class="iconfont icon-yanse1 swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab"></view>
+    <view class="iconfont icon-Group- swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab"></view>
+    <view class="iconfont icon-beijingse swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab"></view>
+  </view>
+
+  <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab">
+    <!-- 字体大小 -->
+    <swiper-item>
+      <view class="swiperItem1">
+        <slider show-value value='{{sliderValOfFontSize}}' bindchanging='changeFontSize' selected-color='#006AFE'></slider>
+      </view>
+    </swiper-item>
+
+    <!-- 选择颜色 -->
+    <swiper-item>
+      <view class="swiperItem2">
+        <view class="colorBox" bindtap="setColor">
+          <view class="colorItems" wx:key="id" wx:for='{{colorArr}}' data-index="{{index}}" style="background-color:{{item.color}}"></view>
+        </view>
+      </view>
+    </swiper-item>
+
+    <!-- 字体速度 -->
+    <swiper-item>
+      <view class="swiperItem1">
+        <slider show-value bindchanging='changeTextSpeend' selected-color='#006AFE' value='{{sliderValOfAnimateTime}}'></slider>
+      </view>
+    </swiper-item>
+
+    <!-- 背景颜色 -->
+    <swiper-item>
+      <view class="swiperItem2">
+        <view class="colorBox" bindtap="setBackGroundColor">
+          <view class="colorItems" wx:key="id" wx:for='{{colorArr}}' data-index="{{index}}" style="background-color:{{item.color}}"></view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+</view>

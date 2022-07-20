@@ -1,0 +1,3 @@
+<view class="page {{isDark ? 'page-theme' : ''}}">
+  <slot></slot>
+</view>

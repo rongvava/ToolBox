@@ -1,0 +1,7 @@
+.container__dark .box,
+.container__dark .title {
+  color: #000000;
+}
+.container__dark .box {
+  border: 1px solid #ebebeb;
+}

@@ -1,0 +1,12 @@
+<vel-container />
+<view class="cell-list cell__{{theme?'dark':'light'}}">
+  <van-cell bind:click="tapFeedbackModel" title="Problem Feedback" title-class="defalut__{{theme?'dark':'light'}}" is-link>
+    <image class="icon" slot="icon" src="/static/setting/icon1-{{theme?'dark':'light'}}.png"></image>
+  </van-cell>
+
+  <block wx:for="{{menus}}">
+    <van-cell url="{{item.url}}" title="{{item.title}}" title-class="defalut__{{theme?'dark':'light'}}" is-link>
+      <image class="icon" slot="icon" src="/static/setting/icon{{index+2}}-{{theme?'dark':'light'}}.png"></image>
+    </van-cell>
+  </block>
+</view>

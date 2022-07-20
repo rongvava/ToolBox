@@ -1,0 +1,8 @@
+.cell__dark {
+  --cell-background-color: #2a2c39;
+  --cell-active-color: #42475b;
+}
+
+.cell__dark .van-cell__title {
+  color: #ffffff;
+}

@@ -1,0 +1,13 @@
+/* eslint-disable */
+var style = require('../../wxs/style.wxs')
+
+function addStyle(data) {
+  return style({
+    'background-image': 'linear-gradient(' + data.bColor + ')',
+    'box-shadow': '0 10px 40px 0 ' + data.shadow
+  })
+}
+
+module.exports = {
+  addStyle: addStyle
+}

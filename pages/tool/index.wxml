@@ -1,0 +1,11 @@
+<vel-container />
+<wxs src="./index.wxs" module="computed"></wxs>
+<van-notify id="van-notify" />
+<view class="container">
+  <view class="tool-item theme-color__{{theme?'dark':'light'}}" wx:for="{{toolsList}}" wx:key="keyId" bindtap="tapToolNodes" data-id="{{index}}">
+    <view class="tool-item_icon" style="{{computed.addStyle({bColor:item.bColor, shadow:item.shadow})}}">
+      <image src="{{item.icon}}"></image>
+    </view>
+    <text>{{item.title}}</text>
+  </view>
+</view>

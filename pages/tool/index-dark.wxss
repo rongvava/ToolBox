@@ -1,0 +1,4 @@
+.theme-color__dark {
+  color: #ffffff;
+  background-color: #46475c;
+}

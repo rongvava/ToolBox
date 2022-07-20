@@ -1,0 +1,14 @@
+var style = require('../../../wxs/style.wxs')
+
+function addStyle(data) {
+  return style({
+    fontSize: data.fontSize + 'rpx',
+    color: data.fontColor,
+    // 'animation': 'animateText ' + data.animateTime + 's infinite linear'
+  })
+}
+
+
+module.exports = {
+  addStyle: addStyle,
+}

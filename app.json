@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/introduce/index",
+    "pages/setting/index",
+    "pages/tool/index"
+  ],
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "vel-container": "/components/vel-container/index"
+  },
+  "subPackages": [{
+    "root": "package_tool",
+    "pages": [
+      "pages/marquee/index"
+    ],
+    "independent": true
+  }],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2a2c39",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar-icon/tab1.png",
+        "selectedIconPath": "static/tabbar-icon/tab1-active.png"
+      },
+      {
+        "pagePath": "pages/tool/index",
+        "iconPath": "static/tabbar-icon/tab2.png",
+        "selectedIconPath": "static/tabbar-icon/tab2-active.png"
+      },
+      {
+        "pagePath": "pages/setting/index",
+        "iconPath": "static/tabbar-icon/tab3.png",
+        "selectedIconPath": "static/tabbar-icon/tab3-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

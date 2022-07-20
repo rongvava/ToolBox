@@ -1,0 +1,32 @@
+<vel-container />
+<view class="container container-{{theme?'dark':'light'}}" style="padding-top: {{navHeight}}px;">
+  <view class="user-icon">
+    <image src="/static/index/user.png"></image>
+  </view>
+  <view class="user-name">Hi Vadim</view>
+  <view class="user-label">great day for anew challenge</view>
+
+  <view class="tool-container">
+    <!-- battery -->
+    <view hover-class="zoom" class="tool-electric-quantity">
+      <view class="top_cont">
+        <view>Electric Quantity</view>
+        <view class="progress">Progress</view>
+      </view>
+      <view class="bot_cont">
+        <view class="circle">
+          <view class="bg-black">
+            <view class="cover"></view>
+          </view>
+        </view>
+        <view class="e-q-num">{{batteryNum || 0}}%</view>
+      </view>
+    </view>
+    <!-- time -->
+    <!-- head portrait -->
+    <view class="tool-photo">
+      <image src="/static/index/photo.jpg"></image>
+      <text class="over-hide">head portrait</text>
+    </view>
+  </view>
+</view>

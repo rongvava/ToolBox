@@ -1,0 +1,16 @@
+.container-light .user-name,
+.container-light .user-label {
+  color: #000000;
+}
+
+
+.container-light .tool-electric-quantity {
+  background-color: #2b2b2b;
+}
+
+
+.container-light .circle::after,
+.container-light .cover::before,
+.container-light .cover::after {
+  background-color: #2b2b2b;
+}

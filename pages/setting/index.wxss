@@ -1,0 +1,17 @@
+@import "./index-light.wxss";
+@import "./index-dark.wxss";
+
+.icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.van-cell:after {
+  border-bottom: 1px solid var(--cell-active-color) !important;
+}
+
+.van-cell {
+  align-items: center;
+  font-size: 32rpx !important;
+}
