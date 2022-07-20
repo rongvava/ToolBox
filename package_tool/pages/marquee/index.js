@@ -142,68 +142,7 @@ Page({
   queryRequest() {
     let text = 'Please enter the barrage'
     if (!this.data.inputText.replace(/\s+/g, '')) return this.showNotify(text, '#096')
-    /**
-     * 敏感图片检测
-     * 这是接口基于HTTPS协议。开发者服务器可以调用此接口校验一张图片是否含有敏感信息。接口为
-     * method: 'POST',
-     * https://api.weixin.qq.com/wxa/img_sec_check?access_token=ACCESS_TOKEN
-     */
-
-    // | 参数 | 是否必须 | 说明 |
-    // | access_token | 是 | 接口凭证 |
-    // | media | 是 | 图片文件，支持jpeg，jpg，png，gif，像素不超过750*1334 |
-
-    let params = {
-      grant_type: 'client_credential',
-      appid: 'wx695d5bb300c1f0c7',
-      secret: '2a0d830c0571f4fe9b9bd785524b4911'
-    }
-    // 获取access_token
-    // 在使用敏感文本接口和敏感图片接口都需要access_token参数，获取access_token接口为 https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
-
-    // | 参数 | 是否必须 | 说明 |
-    // | grant_type | 是 | 此处为client_credential |
-    // | appid | 是 | 小程序的appid |
-    // | secret | 是 | 小程序的appsecret |
-
-    http.get('https://api.weixin.qq.com/cgi-bin/token', params, data => {
-      //正常返回结果
-      if (data.expires_in == 7200) {
-        let query = {
-          content: this.data.inputText
-        }
-        //敏感文本检测 这是接口基于https协议。开发者服务器可以调用此接口校验一段文本是否含有敏感信息。接口为 https://api.weixin.qq.com/wxa/msg_sec_check?access_token=ACCESS_TOKEN
-
-        // | 参数 | 是否必须 | 说明 |
-        // | access_token | 是 | 接口凭证 |
-        // | content | 是 | 检测的文本内容 |
-
-        // 正常返回结果
-        //   {
-        //     "errcode": "0",
-        //     "errmsg": "ok"
-        // }
-        //当content内含有敏感信息，则返回87014
-        //   {
-        //     "errcode": 87014,
-        //     "errmsg": "risky content"
-        // }
-        http.post(`https://api.weixin.qq.com/wxa/msg_sec_check?access_token=${data.access_token}`, query, res => {
-          if (res.errcode == 0) {
-            this.setInputText()
-          } else {
-            this.showNotify('包含敏感词汇')
-            this.setData({
-              inputText: ''
-            })
-          }
-        }, () => {
-          this.setInputText()
-        })
-      }
-    }, () => {
-      this.setInputText()
-    })
+    this.setInputText()
   },
   setInputText() {
     this.setData({
