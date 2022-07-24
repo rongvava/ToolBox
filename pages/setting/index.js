@@ -5,11 +5,11 @@ Page({
   data: {
     languageList: ['Chinese', 'English'],
     languageDefault: [1],
-    show: true,
+    show: false,
     _t: {},
     theme: app.globalData.isDark,
     menus: [{
-      title: i18n._t()['about'],
+      title: "",
       url: '/pages/introduce/index',
       id: utils.uuid()
     }],
@@ -25,7 +25,8 @@ Page({
     this.setData({
       _t: i18n._t(),
       languageDefault: i18n.getLanguage() === 'English' ? [1] : [0],
-      'languageList[0]': i18n.getLanguage() === 'English' ? 'Chinese' : '中文'
+      'languageList[0]': i18n.getLanguage() === 'English' ? 'Chinese' : '中文',
+      'menus[0].title': i18n._t()['about']
     })
     wx.setNavigationBarTitle({
       title: i18n._t()['settingTitle'],

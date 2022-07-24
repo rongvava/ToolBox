@@ -10,8 +10,8 @@
     <!-- battery -->
     <view hover-class="zoom" class="tool-electric-quantity">
       <view class="top_cont">
-        <view>{{_t['ele']}}</view>
-        <!-- <view class="progress">Progress</view> -->
+        <view>Electric Quantity</view>
+        <view class="progress">Progress</view>
       </view>
       <view class="bot_cont">
         <view class="circle">

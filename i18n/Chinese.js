@@ -1,6 +1,6 @@
 const languageMap = {
   "tag": "这是迎接新挑战的好日子",
-  "ele": "电量",
+  "ele": "电量进度条",
   "headPhoto": "头像",
   "bulletScreen": "手持弹幕",
   "moreTool": "更多小工具",
