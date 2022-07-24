@@ -1,21 +1,12 @@
 <vel-container />
-
 <view class="container container__{{theme?'dark':'light'}}">
   <view class="box">
-    <!-- <view class="title">关于工具箱</view> -->
-    <view class="title">About the Toolbox</view>
-    <!-- <view class="content">
-      该项目是我个人开发的一款常用工具库，以后也会不断的增加一些功能，如何你有什么好的建议和意见，可以与我联系，vx: <text user-select>Roovava</text>。
-    </view> -->
+    <view class="title">{{_t['aboutTool']}}</view>
     <view class="content">
-      This project is a common tool library developed by me personally, and some functions will be added continuously in the future. If you have any good suggestions and opinions, please contact me，WeChat： <text user-select>Roovava</text>.
+      {{_t['aboutContent1']}}，{{_t['wx']}}:<text user-select>Roovava</text>.
     </view>
-    
-    <view class="content">It is free to use without any charge.</view>
-    <!-- <view class="content">免费使用，不收取任何费用。</view> -->
-    <view class="content">Part of the material comes from the network, if there is infringement, please contact delete.</view>
-    <!-- <view class="content">部分素材来源于网络，如有侵权，请联系删除。</view> -->
-    <view class="content">Stay tuned for more features.</view>
-    <!-- <view class="content">更多功能敬请期待！</view> -->
+    <view class="content">{{_t['aboutContent2']}}</view>
+    <view class="content">{{_t['aboutContent3']}}</view>
+    <view class="content">{{_t['aboutContent4']}}</view>
   </view>
 </view>

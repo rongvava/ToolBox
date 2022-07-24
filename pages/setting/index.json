@@ -1,8 +1,8 @@
 {
-  "component": true,
-  "navigationBarTitleText": "Setting",
+  "navigationBarTitleText": "",
   "usingComponents": {
     "van-cell": "../../miniprogram_npm/@vant/weapp/cell/index",
-    "van-cell-group": "../../miniprogram_npm/@vant/weapp/cell-group/index"
+    "van-cell-group": "../../miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-popup": "../../miniprogram_npm/@vant/weapp/popup/index"
   }
 }

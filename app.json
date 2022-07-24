@@ -3,20 +3,23 @@
     "pages/index/index",
     "pages/introduce/index",
     "pages/setting/index",
-    "pages/tool/index"
+    "pages/tool/index",
+    "pages/language/index"
   ],
   "usingComponents": {
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
     "vel-container": "/components/vel-container/index"
   },
-  "subPackages": [{
-    "root": "package_tool",
-    "pages": [
-      "pages/marquee/index"
-    ],
-    "independent": true
-  }],
+  "subPackages": [
+    {
+      "root": "package_tool",
+      "pages": [
+        "pages/marquee/index"
+      ],
+      "independent": true
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#2a2c39",
@@ -24,7 +27,8 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "iconPath": "static/tabbar-icon/tab1.png",
         "selectedIconPath": "static/tabbar-icon/tab1-active.png"

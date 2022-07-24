@@ -15,3 +15,8 @@
   align-items: center;
   font-size: 32rpx !important;
 }
+
+.popup_container {
+  padding: 20rpx;
+  
+}

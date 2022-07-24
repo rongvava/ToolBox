@@ -1,12 +1,32 @@
 <vel-container />
 <view class="cell-list cell__{{theme?'dark':'light'}}">
-  <van-cell bind:click="tapFeedbackModel" title="Problem Feedback" title-class="defalut__{{theme?'dark':'light'}}" is-link>
+  <!-- 多语言 -->
+  <van-cell bind:click="tapShowPicker" title="{{_t['language']}}" title-class="defalut__{{theme?'dark':'light'}}" is-link>
+    <image class="icon" slot="icon" src="/static/setting/icon3-{{theme?'dark':'light'}}.png"></image>
+  </van-cell>
+
+
+  <!-- 问题反馈 -->
+  <van-cell bind:click="tapFeedbackModel" title="{{_t['issue']}}" title-class="defalut__{{theme?'dark':'light'}}" is-link>
     <image class="icon" slot="icon" src="/static/setting/icon1-{{theme?'dark':'light'}}.png"></image>
   </van-cell>
 
-  <block wx:for="{{menus}}">
+  <block wx:for="{{menus}}" wx:key="id">
     <van-cell url="{{item.url}}" title="{{item.title}}" title-class="defalut__{{theme?'dark':'light'}}" is-link>
       <image class="icon" slot="icon" src="/static/setting/icon{{index+2}}-{{theme?'dark':'light'}}.png"></image>
     </van-cell>
   </block>
 </view>
+
+
+<van-popup show="{{show}}" position="bottom" round bind:close="close">
+  <view class="popup_container">
+    <picker-view value="{{languageDefault}}" indicator-style="height: 50px;" style="width: 100%; height: 400rpx;text-align: center; line-height: 50px;" bindchange="changeLanguage">
+      <picker-view-column>
+        <block wx:for="{{languageList}}" wx:key="*this">
+          <view>{{item}}</view>
+        </block>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</van-popup>

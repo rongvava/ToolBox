@@ -1,9 +1,13 @@
 // app.js
+
+let i18n = require('./i18n/index')
 App({
   globalData: {
     isDark: false
   },
   onLaunch() {
+    i18n.getLanguage()
+    wx.setStorageSync('Language', 'English')
     this.getTimeState()
     // 获取设备信息
     wx.getSystemInfo({

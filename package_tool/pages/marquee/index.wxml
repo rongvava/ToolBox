@@ -2,12 +2,12 @@
 
 <view class="textBox" style="background-color:{{backgroundColor}}" bindtap="showInput">
   <view class='text' style="font-size: {{fontSize}}rpx; animation: animateText {{animateTime}}s infinite linear; color:{{fontColor}}">
-    {{text}}
+    {{scrollText}}
   </view>
 </view>
 
 <view class="inputBox" wx:if="{{isShowInput}}">
-  <input class="inp" placeholder="Please enter the barrage~" bindinput="sendBtn" cursor-spacing='10'></input>
+  <input class="inp" value="{{inputText}}" placeholder="{{placeholder}}" bindinput="sendBtn" cursor-spacing='10'></input>
   <view bindtap="queryRequest" class="iconfont icon-1huojian iconBtn1"></view>
   <view bindtap="showModal" class="iconfont icon-qita3 iconBtn1"></view>
 </view>

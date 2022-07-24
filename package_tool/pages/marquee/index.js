@@ -1,12 +1,14 @@
-import utils from '../../../common/utils'
-import http from '../../../common/http'
+import utils from '../../../common/utils';
 import Notify from '../../../miniprogram_npm/@vant/weapp/notify/notify';
+let i18n = require('../../../i18n/index');
 
 Page({
   data: {
+    _t: i18n._t(),
     isShowInput: false,
     inputText: '',
-    text: 'Please enter the barrage~',
+    scrollText: i18n._t()['inputText'],
+    placeholder: i18n._t()['inputText'],
     // text: '请输入弹幕~',
     sliderValOfFontSize: 50,
     fontSize: 300,
@@ -133,20 +135,18 @@ Page({
 
   sendBtn(res) {
     this.setData({
-      inputText: res.detail.value,
+      inputText:res.detail.value,
     })
   },
 
-  //敏感字验证
-  //修改！！！
   queryRequest() {
-    let text = 'Please enter the barrage'
+    let text = this.data._t['inputText']
     if (!this.data.inputText.replace(/\s+/g, '')) return this.showNotify(text, '#096')
     this.setInputText()
   },
   setInputText() {
     this.setData({
-      text: this.data.inputText,
+      scrollText: this.data.inputText,
       isShowInput: false
     })
   },

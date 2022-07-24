@@ -1,6 +1,6 @@
 {
   "component": true,
-  "navigationBarTitleText": "Tool Cabinet",
+  "navigationBarTitleText": "",
   "usingComponents": {
     "van-notify": "@vant/weapp/notify/index"
   }

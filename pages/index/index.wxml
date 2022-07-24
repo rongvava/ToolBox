@@ -4,14 +4,14 @@
     <image src="/static/index/user.png"></image>
   </view>
   <view class="user-name">Hi Vadim</view>
-  <view class="user-label">great day for anew challenge</view>
+  <view class="user-label">{{_t['tag']}}</view>
 
   <view class="tool-container">
     <!-- battery -->
     <view hover-class="zoom" class="tool-electric-quantity">
       <view class="top_cont">
-        <view>Electric Quantity</view>
-        <view class="progress">Progress</view>
+        <view>{{_t['ele']}}</view>
+        <!-- <view class="progress">Progress</view> -->
       </view>
       <view class="bot_cont">
         <view class="circle">
@@ -26,7 +26,7 @@
     <!-- head portrait -->
     <view class="tool-photo">
       <image src="/static/index/photo.jpg"></image>
-      <text class="over-hide">head portrait</text>
+      <text class="over-hide">{{_t['headPhoto']}}</text>
     </view>
   </view>
 </view>

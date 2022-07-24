@@ -1,3 +1,5 @@
+let i18n = require('../../i18n/index')
+
 const app = getApp()
 
 Page({
@@ -5,15 +7,24 @@ Page({
     navHeight: '',
     batteryNum: 0,
     timer: null,
-    theme: ''
+    theme: '',
+    _t: {}
   },
   onLoad() {
     this.setData({
       navHeight: app.globalData.navHeight,
-      theme: app.globalData.isDark
+      theme: app.globalData.isDark,
+      _t: i18n._t()
     })
   },
   onShow() {
+    wx.getBatteryInfo({
+      success: (res) => {
+        this.setData({
+          batteryNum: res.level
+        })
+      },
+    })
     this.setData({
       timer: setInterval(() => {
         wx.getBatteryInfo({
