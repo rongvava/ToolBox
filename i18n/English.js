@@ -23,8 +23,5 @@ const languageMap = {
   "aboutContent3": "IPart of the material comes from the network, if there is infringement, please contact delete.",
   "aboutContent4": "Stay tuned for more features.",
   "language": "Language"
-
 }
-module.exports = {
-  languageMap: languageMap
-}
+export default languageMap

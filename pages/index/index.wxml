@@ -4,8 +4,7 @@
     <image src="/static/index/user.png"></image>
   </view>
   <view class="user-name">Hi Vadim</view>
-  <view class="user-label">{{_t['tag']}}</view>
-
+  <view class="user-label">{{t['tag']}}</view>
   <view class="tool-container">
     <!-- battery -->
     <view hover-class="zoom" class="tool-electric-quantity">

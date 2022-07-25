@@ -1,13 +1,19 @@
+import Chinese from './Chinese'
+import English from './English'
+
 function getLanguage() {
   return wx.getStorageSync('Language') || setLanguage()
 }
 
 function setLanguage() {
-  return wx.setStorageSync('Language', 'English')
+  wx.setStorageSync('Language', 'English')
 }
 
 function translate() {
-  return require(`./${getLanguage()}.js`).languageMap
+  if (wx.getStorageSync('Language') === "English") {
+    return English
+  }
+  return Chinese
 }
 
 function translateTxt(desc) {

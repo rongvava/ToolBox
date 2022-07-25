@@ -8,20 +8,21 @@ Page({
     batteryNum: 0,
     timer: null,
     theme: '',
-    _t: {}
+    t: {}
   },
   onLoad() {
     this.setData({
       navHeight: app.globalData.navHeight,
       theme: app.globalData.isDark,
-      _t: i18n._t()
+      t: i18n._t()
     })
+    console.log(this.data.t);
   },
   onShow() {
     wx.getBatteryInfo({
       success: (res) => {
         this.setData({
-          batteryNum: res.level
+          batteryNum: Math.ceil(res.level)
         })
       },
     })
@@ -30,7 +31,7 @@ Page({
         wx.getBatteryInfo({
           success: (res) => {
             this.setData({
-              batteryNum: res.level
+              batteryNum: Math.ceil(res.level)
             })
           },
         })

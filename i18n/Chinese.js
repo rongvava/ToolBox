@@ -24,6 +24,4 @@ const languageMap = {
   "aboutContent4": "更多功能敬请期待！",
   "language": "多语言"
 }
-module.exports = {
-  languageMap: languageMap
-}
+export default languageMap
