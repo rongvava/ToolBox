@@ -7,18 +7,19 @@ Page({
     navHeight: '',
     batteryNum: 0,
     timer: null,
-    theme: '',
-    t: {}
+    theme: app.globalData.isDark,
+    _t: {}
   },
   onLoad() {
+    app.initThemeColor()
     this.setData({
-      navHeight: app.globalData.navHeight,
-      theme: app.globalData.isDark,
-      t: i18n._t()
+      navHeight: app.globalData.navHeight
     })
-    console.log(this.data.t);
   },
   onShow() {
+    this.setData({
+      _t: i18n._t()
+    })
     wx.getBatteryInfo({
       success: (res) => {
         this.setData({

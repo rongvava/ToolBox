@@ -7,7 +7,6 @@ App({
   },
   onLaunch() {
     i18n.getLanguage()
-    this.getTimeState()
     // 获取设备信息
     wx.getSystemInfo({
       success: res => {
